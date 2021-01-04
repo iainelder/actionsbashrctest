@@ -32,7 +32,7 @@ jobs:
         run: echo "Hello from Workflow"
         
       - name: Set up ~/.bash_profile
-        run: echo "Hello from .bash_profile" > ~/.bash_profile
+        run: echo "echo \"Hello from .bash_profile\"" > ~/.bash_profile
       
       - name: Hello from ~/.bash_profile
         shell: bash -l {0}
