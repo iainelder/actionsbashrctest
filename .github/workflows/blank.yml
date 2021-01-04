@@ -36,4 +36,4 @@ jobs:
       
       - name: Hello from ~/.bash_profile
         shell: bash -l {0}
-        run: "Did .bash_profile say hello?"
+        run: echo "Did .bash_profile say hello?"
