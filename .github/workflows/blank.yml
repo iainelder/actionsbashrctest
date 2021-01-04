@@ -30,3 +30,10 @@ jobs:
 
       - name: Hello from workflow
         run: echo "Hello from Workflow"
+        
+      - name: Set up ~/.bash_profile
+        run: echo "Hello from .bash_profile" > ~/.bash_profile
+      
+      - name: Hello from ~/.bash_profile
+        shell: bash -l {0}
+        run: "Did .bash_profile say hello?"
