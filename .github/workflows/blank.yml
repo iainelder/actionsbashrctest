@@ -42,5 +42,5 @@ jobs:
         run: echo "echo \Hello from .bashrc\"" > ~/.bashrc
 
       - name: Hello from ~/.bashrc (login, interactive)
-        shell: bash -l --rcfile ~/.bashrc {0}
+        shell: bash --login --rcfile ~/.bashrc {0}
         run: echo "Did .bashrc say hello?"
