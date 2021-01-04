@@ -34,6 +34,13 @@ jobs:
       - name: Set up ~/.bash_profile
         run: echo "echo \"Hello from .bash_profile\"" > ~/.bash_profile
       
-      - name: Hello from ~/.bash_profile
+      - name: Hello from ~/.bash_profile (login, interactive)
         shell: bash -l {0}
         run: echo "Did .bash_profile say hello?"
+
+      - name: Hello from ~/.bashrc
+        run: echo "echo \Hello from .bashrc\"" > ~/.bashrc
+
+      - name: Hello from ~/.bashrc (login, interactive)
+        shell: bash -li {0}
+        run: echo "Did .bashrc say hello?"
