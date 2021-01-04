@@ -46,6 +46,7 @@ jobs:
         run: echo "Did .bashrc say hello?"
 
       - name: Hello from BASH_ENV (simulating an interactive non-login shell)
+        shell: bash {0}
         env:
           BASH_ENV: ~/.bashrc
         run: echo "Did .bashrc say hello?"
