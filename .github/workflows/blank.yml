@@ -60,9 +60,7 @@ jobs:
         shell: bash -c "BASH_ENV=~/.bashrc bash {0}"
     steps:
       - name: Set up ~/.bashrc
-        run: echo "echo \"Hello from .bashrc\"" > ~/.bashrc
+        run: echo "echo \"Hello from default shell\"" > ~/.bashrc
 
-      - name: Hello from BASH_ENV (simulating an interactive non-login shell)
-        env:
-          BASH_ENV: ~/.bashrc
-        run: echo "Did .bashrc say hello?"
+      - name: Hello from default shell (simulating an interactive non-login shell)
+        run: echo "Did default shell say hello?"
