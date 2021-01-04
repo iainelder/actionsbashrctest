@@ -39,7 +39,7 @@ jobs:
         run: echo "Did .bash_profile say hello?"
 
       - name: Set up ~/.bashrc
-        run: echo "echo \Hello from .bashrc\"" > ~/.bashrc
+        run: echo "echo \"Hello from .bashrc\"" > ~/.bashrc
 
       - name: Hello from ~/.bashrc (login, interactive)
         shell: bash -li {0}
