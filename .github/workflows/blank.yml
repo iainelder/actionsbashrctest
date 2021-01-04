@@ -38,9 +38,14 @@ jobs:
         shell: bash -l {0}
         run: echo "Did .bash_profile say hello?"
 
-      - name: Hello from ~/.bashrc
+      - name: Set up ~/.bashrc
         run: echo "echo \Hello from .bashrc\"" > ~/.bashrc
 
       - name: Hello from ~/.bashrc (login, interactive)
-        shell: bash --login --rcfile ~/.bashrc {0}
+        shell: bash -li {0}
+        run: echo "Did .bashrc say hello?"
+
+      - name: Hello from BASH_ENV (simulating an interactive non-login shell)
+        env:
+          BASH_ENV: ~/.bashrc
         run: echo "Did .bashrc say hello?"
